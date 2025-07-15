@@ -11,20 +11,27 @@
         font-weight: normal;
         font-style: normal;
       }
+
       .navbar {
         margin-bottom: 20px;
         background-color: rgb(255, 255, 255);
-        border-bottom: 1px solid #ccc; /* Added line divider */
-        position:relative; /* Make navbar stay at the top of the document */
-        top: 0; /* Position at the very top of the viewport */
-        width: 100%; /* Ensure navbar stretches across the viewport */
-        z-index: 1000; /* Ensure it stays above other elements */
+        border-bottom: 1px solid #ccc;
+        /* Added line divider */
+        position: relative;
+        /* Make navbar stay at the top of the document */
+        top: 0;
+        /* Position at the very top of the viewport */
+        width: 100%;
+        /* Ensure navbar stretches across the viewport */
+        z-index: 1000;
+        /* Ensure it stays above other elements */
       }
-      
+
       body {
-        padding-top: 70px; /* Prevent content from hiding behind the fixed navbar */
+        padding-top: 70px;
+        /* Prevent content from hiding behind the fixed navbar */
       }
-      
+
 
       .navbar-brand {
         font-weight: 600;
@@ -41,7 +48,8 @@
       }
 
       h1 {
-        font-weight: 30;;
+        font-weight: 30;
+        ;
         margin: 1%;
 
       }
@@ -111,7 +119,7 @@
         display: block;
         font-weight: bolder;
         font-size: 2rem;
-        opacity: .8; 
+        opacity: .8;
       }
 
       .card:hover img {
@@ -150,7 +158,7 @@
         background-color: #5b7896 !important;
       }
 
-      
+
       img {
         max-width: 100%;
         height: auto;
@@ -225,7 +233,7 @@
 
 
       .image {
-        display:flex;
+        display: flex;
         width: 100%;
         height: auto;
         margin: 10px;
@@ -295,4 +303,30 @@
 
       .container:hover .overlay {
         opacity: 1;
+      }
+
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+      }
+
+      .blog-post {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .blog-post h1 {
+        font-size: 2rem;
+      }
+
+      .blog-post a {
+        color: #0d6efd;
+        text-decoration: none;
+      }
+
+      .blog-post a:hover {
+        text-decoration: underline;
       }
