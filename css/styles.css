@@ -37,7 +37,7 @@ body {
 .navbar-brand {
   font-weight: 600;
   text-align: center;
-  flex-grow: 1;
+  flex-shrink: 0;
 }
 
 .navbar-brand h1 {
@@ -62,6 +62,7 @@ body {
 .navbar-toggler {
   border: none;
   padding: 0.25rem 0.5rem;
+  z-index: 1001;
 }
 
 .navbar-toggler:focus {
@@ -69,16 +70,32 @@ body {
 }
 
 .navbar-collapse {
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 @media (max-width: 767.98px) {
   .navbar-brand {
-    flex-grow: 0;
+    text-align: center;
+    flex: 1;
+  }
+  
+  .navbar-toggler {
+    order: 2;
   }
   
   .navbar-collapse {
-    justify-content: flex-end;
+    justify-content: center;
+    text-align: center;
+    order: 3;
+  }
+  
+  .navbar-nav {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .navbar-nav .nav-item {
+    text-align: center;
   }
 }
 
@@ -509,6 +526,27 @@ img {
   
   .navbar-brand p {
     font-size: 0.875rem;
+  }
+  
+  /* Ensure toggle button is visible and clickable */
+  .navbar-toggler {
+    display: block !important;
+    position: relative;
+    z-index: 1001;
+    background: transparent;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 4px;
+  }
+  
+  .navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
   }
 }
 
